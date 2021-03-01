@@ -1,5 +1,5 @@
 .header {
-  background-color: #262D33;
+  background-color: #262d33;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -9,11 +9,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header-menu {
@@ -24,8 +24,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-item a {
@@ -37,6 +37,8 @@
 
 .search-form {
   position: relative;
+  width: 270px;
+  height: 40px;
 }
 
 .search-form input {
@@ -45,7 +47,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #656B70;
+  background-color: #656b70;
   border-radius: 10px;
   border: none;
   padding: 10px 25px;
@@ -76,7 +78,7 @@
   background: url(../images/search.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: transporent;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
