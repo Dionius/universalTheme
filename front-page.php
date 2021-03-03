@@ -9,7 +9,7 @@
 
           $myposts = get_posts([ 
             'numberposts' => 1, //количество постов 
-            //'category_name' => 'javascript', //название категории
+            'category_name' => 'javascript,css, html, webdesign' //название категории
           ]);
             //проверяем есть ли посты
           if( $myposts ){
@@ -27,9 +27,9 @@
           </div>
         </a>
         <div class="post-text">
-        <?php the_category();?> 
-        <h2 class="post-title"> <?php the_title();?> </h2>
-        <a href="<?php echo get_the_permalink();?>" class="more"> Читать далее </a>
+         <?php the_category();?> 
+          <h2 class="post-title"> <?php echo wp_trim_words( get_the_title(), 60, '...' );?> </h2>
+           <a href="<?php echo get_the_permalink();?>" class="more"> Читать далее </a>
         </div>
           <?php 
               }
@@ -43,7 +43,7 @@
 
       <div class="right">
         <h3 class="recommend">Рекомендуем</h3>
-        <ul class="posts-list">
+        <ul class="post-list">
             <?php
               //обьявляем глобальную переменную
               global $post;
@@ -51,7 +51,7 @@
               $myposts = get_posts([ 
                 'numberposts' => 5, //количество постов 
                 'offset' => 1,
-                //'category_name' => 'javascript', //название категории
+                'category_name' => 'javascript,css, html, webdesign'
               ]);
                 //проверяем есть ли посты
               if( $myposts ){
@@ -62,7 +62,7 @@
               <li class="post">
                 <?php the_category();?>
                 <a class="post-permalink" href="<?php echo get_the_permalink(); ?>" >
-                  <h4 class="post-title"> <?php the_title();?> </h4>
+                  <h4 class="post-title"> <?php echo wp_trim_words( get_the_title(), 60, '...' );?> </h4>
                 </a>
               </li>
               <?php 
@@ -78,3 +78,35 @@
     </div>
   </div>
 </main>
+<div class="container">
+  <ul class="article-list">
+      <?php
+       //обьявляем глобальную переменную
+          global $post;
+           $myposts = get_posts([ 
+               'numberposts' => 4, //количество постов 
+                'category_name' => 'articles', //название категории
+            ]);
+               //проверяем есть ли посты
+            if( $myposts ){
+            //если есть, запускаем цикл
+              foreach( $myposts as $post ){
+                setup_postdata( $post ); // устанавливаем данные
+      ?>
+              <li class="article-item">
+                <a class="article-permalink" href="<?php echo get_the_permalink(); ?>" >
+                  <h4 class="article-title"> <?php echo wp_trim_words( get_the_title(), 5, '...' );?> </h4>
+                </a>
+                <img width="65" height="65" src="<?php echo get_the_post_thumbnail_url( null , 'homepage-thumb' ) ?>" alt="" >
+              </li>
+              <?php 
+                  }
+                } else {
+              ?><p>Постов нет</p>
+              <?php // Постов не найдено
+                }
+
+                wp_reset_postdata(); // Сбрасываем $post
+              ?>
+        </ul>
+</div>
