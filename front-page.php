@@ -43,7 +43,7 @@
 
       <div class="right">
         <h3 class="recommend">Рекомендуем</h3>
-        <ul class="post-list">
+        <ul class="posts-list">
             <?php
               //обьявляем глобальную переменную
               global $post;
@@ -51,7 +51,7 @@
               $myposts = get_posts([ 
                 'numberposts' => 5, //количество постов 
                 'offset' => 1,
-                'category_name' => 'javascript,css, html, webdesign'
+                'category_name' => 'javascript, css, html, webdesign'
               ]);
                 //проверяем есть ли посты
               if( $myposts ){
