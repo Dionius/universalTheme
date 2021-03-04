@@ -15,7 +15,7 @@
           if( has_custom_logo() ){
             // логотип есть выводим его
             the_custom_logo();
-          }else{
+          } else {
             echo'Universal';
           }
         ?>
