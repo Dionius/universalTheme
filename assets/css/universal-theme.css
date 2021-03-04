@@ -404,9 +404,9 @@ body {
 }
 
 .article-grid-item {
-  overflow: hidden;
   border-radius: 10px;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .article-grid-item-1 {
@@ -416,8 +416,8 @@ body {
   -ms-grid-column-span: 2;
   grid-area: 1 / 1 / 2 / 3;
   padding: 35px 35px 53px 35px;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .article-grid-item-1 .catefory-name {
@@ -426,7 +426,6 @@ body {
   line-height: 15px;
   text-transform: uppercase;
   color: #6E99AE;
-  position: relative;
 }
 
 .article-grid-item-1 .article-grid-title {
@@ -454,6 +453,7 @@ body {
   right: 0;
   padding: 15px 35px;
   border-top: 1px solid #D9DADB;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,6 +535,7 @@ body {
   width: 100%;
   left: 0;
   top: 0;
+  z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -544,11 +545,11 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -652,7 +653,7 @@ body {
 }
 
 .article-grid-item-3 .article-thumb {
-  height: 275px;
+  height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -698,6 +699,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 25px;
+  margin: 0;
   margin-bottom: 5px;
 }
 
